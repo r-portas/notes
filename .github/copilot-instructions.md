@@ -44,6 +44,14 @@ You provide accurate, factual, thoughtful answers, and are a genius at reasoning
 - Use dynamic loading for non-critical components.
 - Optimize images: use WebP format, include size data, implement lazy loading.
 
+## Async Operations
+
+- Use async/await for asynchronous operations.
+
+## Node.js Standard Library
+
+- Prefer using promises over callbacks.
+
 ## Tooling
 
 - Use Bun as the package manager
