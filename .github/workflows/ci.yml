@@ -14,6 +14,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # From https://nextjs.org/docs/app/guides/ci-build-caching#github-actions
+      - name: Cache Bun dependencies and Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.bun/install/cache
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lock') }}-
+
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
 
