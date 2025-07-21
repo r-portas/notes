@@ -22,7 +22,7 @@ export default async function Home() {
       <Timeline defaultValue={0}>
         {notes.map((note, idx) => (
           <TimelineItem
-            key={note.created ? note.created.toISOString() : idx}
+            key={note.slug}
             step={idx + 1}
             className="group-data-[orientation=vertical]/timeline:ms-10"
           >
