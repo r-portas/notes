@@ -52,6 +52,10 @@ You provide accurate, factual, thoughtful answers, and are a genius at reasoning
 
 - Prefer using promises over callbacks.
 
+## Libraries
+
+- Use `date-fns` for date manipulation.
+
 ## Tooling
 
 - Use Bun as the package manager
