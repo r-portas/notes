@@ -33,7 +33,7 @@ export async function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              {/* <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="/search">
                     <SearchIcon className="w-4 h-4" />
@@ -43,10 +43,10 @@ export async function AppSidebar() {
                     </SidebarMenuBadge>
                   </Link>
                 </SidebarMenuButton>
-              </SidebarMenuItem>
+              </SidebarMenuItem> */}
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link href="/recent">
+                  <Link href="/">
                     <ClockIcon className="w-4 h-4" />
                     <span>Recent Notes</span>
                     <SidebarMenuBadge className="text-muted-foreground">
