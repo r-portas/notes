@@ -1,5 +1,6 @@
 import type { Note } from "./types";
 import { MOCK_NOTES } from "./mock-data";
+import { compareAsc } from "date-fns";
 
 /**
  * Directory where note files are stored.
@@ -13,8 +14,10 @@ const NOTES_DIR = "./notes";
  * @remarks
  * In the future this might need pagination when the number of notes grows.
  */
-export async function listNotes(): Promise<Omit<Note, "content">[]> {
-  return MOCK_NOTES.map(({ content, ...rest }) => rest);
+export async function listNotes(): Promise<Note[]> {
+  return [...MOCK_NOTES].sort((a, b) =>
+    compareAsc(a.lastModified, b.lastModified)
+  );
 }
 
 /**
