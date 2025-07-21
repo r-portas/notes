@@ -52,6 +52,16 @@ You provide accurate, factual, thoughtful answers, and are a genius at reasoning
 
 - Prefer using promises over callbacks.
 
+## Testing
+
+- Use Bun's built-in test runner for testing, use `test`, `expect` and `describe` imported from `bun:test`.
+- For testing React components, use React Testing Library.
+- For mocking, use Bun's `mock` function from `bun:test`.
+
+## Libraries
+
+- Use `date-fns` for date manipulation.
+
 ## Tooling
 
 - Use Bun as the package manager
